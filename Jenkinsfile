@@ -9,6 +9,7 @@ pipeline {
     stage('Verify Tools') {
       steps {
         // Verify the installation
+        sh 'node --version'
         sh 'yarn --version'
         sh 'npm --version'
         sh 'node --version'
