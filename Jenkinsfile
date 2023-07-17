@@ -1,40 +1,31 @@
 pipeline {
-    agent any
+  agent any
 
-    tools { nodejs 'nodejs' }
+  tools {
+    nodejs 'nodejs'
+  }
 
-    stages {
-        // stage('SonarQube Analysis') {
-        //     steps {
-        //         withSonarQubeEnv('SonarQube') {
-        //             script {
-        //                 def scannerHome = tool 'SonarScanner'
-        //                 sh "${scannerHome}/bin/sonar-scanner"
-        //             }
-        //         }
-        //     }
-        // }
-         stage('Clean WS') {
-            steps {
-                // Verify the installation
-                sh 'yarn --version'
-                sh 'npm --version'
-                sh 'node --version'
-            }
-        }
-
-
-        stage('Clean WS') {
-            steps {
-                cleanWs()
-            }
-        }
+  stages {
+    stage('Verify Tools') {
+      steps {
+        // Verify the installation
+        sh 'yarn --version'
+        sh 'npm --version'
+        sh 'node --version'
+      }
     }
 
-    post {
-        always {
-            echo 'One way or another, I have finished'
-            cleanWs()
-        }
+    stage('Clean Workspace') {
+      steps {
+        cleanWs()
+      }
     }
+  }
+
+  post {
+    always {
+      echo 'One way or another, I have finished'
+      cleanWs()
+    }
+  }
 }
