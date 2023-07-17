@@ -14,13 +14,14 @@ pipeline {
         //         }
         //     }
         // }
-        
-
-         // Verify the installation
-        sh 'yarn --version'
-        sh 'npm --version'
-        sh 'node --version'
-
+         stage('Clean WS') {
+            steps {
+                // Verify the installation
+                sh 'yarn --version'
+                sh 'npm --version'
+                sh 'node --version'
+            }
+        }
 
 
         stage('Clean WS') {
