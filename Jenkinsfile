@@ -26,6 +26,7 @@ pipeline {
         sh 'node --version'
         sh 'yarn --version'
         sh 'npm --version'
+        sh 'aws --version'
       }
     }
 
