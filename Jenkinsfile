@@ -19,7 +19,7 @@ pipeline {
         sh 'curl -L https://www.npmjs.com/install.sh | sh'
 
         // Install Rover
-        sh 'curl -sSL https://rover.apollo.dev/nix/latest | sh'
+        // sh 'curl -sSL https://rover.apollo.dev/nix/latest | sh'
       }
     }
 
