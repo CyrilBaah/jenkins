@@ -30,7 +30,7 @@ pipeline {
         sh 'yarn --version'
         sh 'npm --version'
         sh 'aws --version'
-        sh 'rover --version'
+        // sh 'rover --version'
       }
     }
 
