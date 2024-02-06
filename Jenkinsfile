@@ -13,10 +13,10 @@ pipeline {
 
 
         // Install Yarn
-        sh 'npm install -g yarn'
+        // sh 'npm install -g yarn'
 
         // Install npm
-        sh 'curl -L https://www.npmjs.com/install.sh | sh'
+        // sh 'curl -L https://www.npmjs.com/install.sh | sh'
 
         // Install Rover
         // sh 'curl -sSL https://rover.apollo.dev/nix/latest | sh'
